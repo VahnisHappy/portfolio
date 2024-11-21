@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Outfit:wght@100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c6304b7af6.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleDarkMode = () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme");
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+        };
+      
+        // Initialize theme based on preference or saved setting
+        const savedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      </script>
+    <title>Vahn</title>
+    <link rel="icon" type="image/x-icon" href="/assets/profile.jpg">
+</head>
+<body>
+    <header>
+        <button id="theme-switch" onclick="toggleDarkMode()">
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+            </svg>
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
+                <path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+            </svg>
+        </button>
+     <!-- Navigation bar -->
+     <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>    
+        </ul>
+      </nav>
+   </header>
+   <main class="container-layout">
+    <section id="hero">
+       <div class="home">
+        <div class="content-home">
+            <img src="assets/profile-1.jpeg" alt="Profile Picture" class="profile-image">
+            <h1 class="headline-profile">Sopida Kiti</h1>
+                <h1 class="headline-profile"><span class="headline-profile-highlight">front-end developer</span></h1>
+        </div>
+            <div class="content-about">
+                <h2 class="intro-profile">A few words about <span class="hightlight-profile">me</span></h2>
+                <br/>
+                <p>I'm Sopida, a Front-End Developer with a passion for exceptional design.
+                    I continuously strive to improve my skills and stay current with new technologies. 
+                    I’m focused on the development of responsive user interfaces
+                    and I’m interested and love learning TypeScript, modern web technologies, user experience, and clean code principles.</p>
+                <div class="profile-btn-group">
+                    <a href="assets/Resume.pdf" target="_blank">
+                        <button class="resume-button">Resume</button>
+                    </a>
+    
+                    <a href="https://www.linkedin.com/in/sopida-kiti-4ba295296/" target="_blank">
+                        <button class="linkedin-button">
+                            LinkedIn <i class="fa-brands fa-linkedin custom-icon"></i>
+                        </button>
+                    </a>
+                </div>
+            </div> 
+       </div>
+    </section>
+    <section id="skill" class="skill-section">
+        <h1 class="headline-section">My Skills</h1>
+        <div class="skill-header">Programming Languages</div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="assets/typescript-original.svg" alt="typescript" class="skill-image">
+                <div>Typescipt</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/javascript-original.svg" alt="javascript" class="skill-image">
+                <div>Javascipt</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/java-original.svg" alt="java" class="skill-image">
+                <div>Java</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/python-original.svg" alt="python" class="skill-image">
+                <div>Python</div>
+            </div>
+        </div>
+        <div class="skill-header">Web Development Tools</div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="assets/react-original.svg" alt="react" class="skill-image">
+                <div>React</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/vitejs-original.svg" alt="vite" class="skill-image">
+                <div>Vite</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/nodejs_logo.png" alt="nodejs" class="skill-image">
+                <div>Node.js</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/html5-original.svg" alt="html" class="skill-image">
+                <div>HTML</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/css3-original.svg" alt="css" class="skill-image">
+                <div>CSS</div>
+            </div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="assets/tailwindcss-original.svg" alt="tailwind_logo" class="skill-image">
+                <div>Tailwind</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/materialui-original.svg" alt="mui" class="skill-image">
+                <div>MUI</div>
+            </div>
+        </div>
+        <div class="skill-header">Database</div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="assets/mysql-original-wordmark.svg" alt="mysql" class="skill-image">
+                <div>MySQL</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/sqlite-original.svg" alt="sqlite" class="skill-image">
+                <div>SQLite</div>
+            </div>
+        </div>
+        <div class="skill-header">Tools</div>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="assets/git-original.svg" alt="git" class="skill-image">
+                <div>Git</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/vscode-original.svg" alt="vscode" class="skill-image">
+                <div>VScode</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/webstorm-original.svg" alt="webstrom" class="skill-image">
+                <div>Webstrom</div>
+            </div>
+            <div class="skill-card">
+                <img src="assets/figma-original.svg" alt="figma" class="skill-image">
+                <div>Figma</div>
+            </div>
+        </div>
+        
+       <!-- About me content -->
+    </section>
+    <section id="projects">
+        <h2 class="headline-section">Projects</h2>
+        <dev class="project-container">
+            <div class="project-card">
+                <div class="project-info">
+                    <h1 class="headline-project">Des2G</h1>
+                    <p>
+                        Des2G is a tool that facilitates transit system design and transforms the design into <a href="https://gtfs.org/" target="_blank"><spane class="project-highlight">GTFS</spane></a> (General Transit Feed Specification) data.
+                        The purpose of the tool is to create an online platform that facilitates transit system design and to develop 
+                        an online tool capable of converting the design into GTFS data.
+                    </p>
+                    <div class="project-btn-group">
+                        <a href="https://youtu.be/1o61K0FzPT0" target="_blank">
+                            <button class="project-button">
+                                <i class="fa-brands fa-youtube" style="color: #FF0000;"></i>
+                                Demo
+                            </button>
+                        </a>
+                        <a href="https://github.com/VahnisHappy/Des2G.git" target="_blank">
+                            <button class="project-button" style="cursor: pointer;">
+                                <i class="fa-brands fa-github custom-icon"></i> Source Code
+                            </button>
+                        </a>
+                        <a href="/assets//Des2G.pdf" target="_blank">
+                            <button class="project-button" style="cursor: pointer;">
+                                <i class="fa-regular fa-file custom-icon"></i> Report
+                            </button>
+                        </a>
+                    </div>    
+                </div>
+                <img src="assets/Des2G.png" alt="des2g" class="project-image">
+            </div>           
+        </dev>
+        <dev class="project-container">
+            <div class="project-card">
+                <div class="project-info">
+                    <h1 class="headline-project">CPE Course Review</h1>
+                    <p>The course’s project has a team to develop software, the software is a web application for review
+                        courses in the Department of Computer Engineering such as general electives, major electives, and
+                        free electives. My roles in the team is front-end developer, designer, and Product owner.</p>
+                    <div class="project-btn-group">
+                        <a href="https://github.com/PaMaaNgong/Frontend.git" target="_blank">
+                            <button class="project-button" style="cursor: pointer;">
+                                <i class="fa-brands fa-github custom-icon"></i> Source Code
+                            </button>
+                        </a>
+                        
+                    </div>    
+                </div>
+                <img src="assets/CPEcoursereview.jpg" alt="cpe" class="project-image">
+            </div>      
+        </dev>
+        <dev class="project-container">
+            <div class="project-card">
+                <div class="project-info">
+                    <h1 class="headline-project">Explore Spotify Wrapped</h1>
+                    <p>The Explore Spotify Wrapped project is a practice project I created to improve my skills. It utilizes React's createContext and useContext hooks for state management.</p>
+                    <div class="project-btn-group">
+                        <a href="https://vahnishappy.github.io/Explore-Spotify-Wrapped/" target="_blank">
+                            <button class="project-button">
+                                <i class="fa-solid fa-arrow-up-right-from-square custom-icon"></i> Live
+                            </button>
+                        </a>
+                        <a href="" target="_blank">
+                            <button class="project-button" style="cursor: pointer;">
+                                <i class="fa-brands fa-github custom-icon" ></i> Source Code
+                            </button>
+                        </a>
+                        
+                    </div>    
+                </div>
+                <img src="assets/mixtape.png" alt="music" class="project-image">
+            </div>      
+        </dev>
+    </section>
+    <section id="education">
+        <h1 class="headline-section">Educaiton</h1>
+        <div class="edu-container">
+            <div class="edu-card">
+                <div class="edu-image-container">
+                    <img src="assets/Chiang_Mai_University.svg.png" alt="cmu" class="edu-image">
+                </div>
+                <div class="edu-info">
+                    <p class="bachelor">Bachelor of Engineering</p>
+                    <p class="university">Chiang Mai University</p>
+                    <!-- <p class="faculty">Faculty of Engineering</p> -->
+                    <p class="major">Major in Computer Engineering</p>
+                    <p class="graduation">Graduated in 2024</p>
+                </div>                
+            </div>
+        </div>
+        <!-- Education contect-->
+     </section>
+    <section id="contact">
+        <h1 class="headline-section">Contact</h1>
+        <div class="contact-container">
+            <p>
+                Contact me directly at <a class="underline" href="mailto:sopiiida@gmail.com">sopiiida@gmail.com</a> any time, my inbox is always open!
+                And I'm always available on my social media, you can also reach out via social media if you prefre. Whether you're interested in collaborating, hiring me for a project, or discussing other opportunities, then feel free to contact me anytime.
+            </p>
+            <br/>
+            <p>Find me on my social networks or send me an email.</p>
+            <div class="social-container">
+                <div class="social-card">
+                    <a href="https://github.com/VahnisHappy" target="_blank">
+                        <img src="assets/github-original.svg" alt="gihub" class="social-image-github">
+                    </a>
+                </div>
+                <div class="social-card">
+                    <a href="https://www.linkedin.com/in/sopida-kiti-4ba295296/" target="_blank">
+                        <img src="assets/linkedin-original.svg" alt="linkedin" class="social-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+   </main>
+   <footer>
+     <!-- Footer content -->
+      <p>Created and Designed by Sopida Kiti | Copyright © 2024 </p>
+   </footer>
+ </body>
+</html>
