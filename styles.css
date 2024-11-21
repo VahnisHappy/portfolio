@@ -569,6 +569,7 @@ body {
   }
 }
 
+
 @media (max-width: 768px) {
   .container-layout {
     padding: 0 20px;
@@ -577,6 +578,10 @@ body {
   .home {
     flex-direction: column;
     align-items: center;
+  }
+
+  .profile-btn-group{
+    justify-content: center;
   }
 
   .content-home, .content-about {
@@ -641,6 +646,15 @@ body {
     font-size: 16px;
     text-align: center;
     padding: 10px 0;
+  }
+}
+
+@media(max-width: 1280px) {
+  .project-card {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 700px;
   }
 }
 
